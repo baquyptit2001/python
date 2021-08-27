@@ -1,7 +1,7 @@
 from math import isqrt
 
 
-def IsPrime(n):
+def prime(n):
     if n < 2:
         return False
     for i in range(2, isqrt(n) + 1, 1):
@@ -14,7 +14,7 @@ n = int(input())
 store = list(map(int, input().split()))
 number, count = [], []
 for i in store:
-    if IsPrime(i):
+    if prime(i):
         if i in number:
             count[number.index(i)] += 1
         else:
