@@ -1,20 +1,29 @@
-def checker(n):
-    if len(n) % 2 != 0:
+import math
+
+
+def gcd(a, b):
+    if a == 0 :
+        return b
+    return gcd(b%a, a)
+
+
+def nguyenTo(n):
+    if n<2:
         return False
-    for i in range(0, len(n) // 2, 1):
-        if n[i] != n[len(n) - 1 - i] or int(n[i]) % 2 != 0:
+    for i in range (2, math.isqrt(n)+1):
+        if n%i==0:
             return False
     return True
 
 
 t = int(input())
-for i in range(t):
+for u in range(t):
     n = int(input())
-    for i in range(22, n, 2):
-        if checker(str(i)):
-            print(i, end=' ')
-    print()
-
-
-
-#x, y = [int(x) for x in [x, y]]
+    dem = 0
+    for i in range(1, n):
+        if gcd(i, n):
+            dem+=1
+    if nguyenTo(dem):
+        print("YES")
+    else:
+        print("NO")
