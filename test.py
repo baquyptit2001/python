@@ -14,3 +14,7 @@ for i in range(t):
         if checker(str(i)):
             print(i, end=' ')
     print()
+
+
+
+#x, y = [int(x) for x in [x, y]]
