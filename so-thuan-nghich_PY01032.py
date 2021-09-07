@@ -24,7 +24,8 @@ def init(s):
 def BS(l, r, x):
     while l <= r:
         mid = (l + r) // 2
-        if palindrome[mid] == x: return mid
+        if palindrome[mid] == x:
+            return mid
         if palindrome[mid] < x:
             l = mid + 1
         else:
