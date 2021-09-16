@@ -8,8 +8,7 @@ init(fibo)
 t = int(input())
 
 for u in range(t):
-    a, b = input().split()
-    a, b = int(a), int(b)
+    a, b = [int(x) for x in input().split()]
     for i in range(a - 1, b, 1):
         print(fibo[i], end=' ')
     print()
